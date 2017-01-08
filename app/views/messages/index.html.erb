@@ -13,10 +13,14 @@
 </div>
 
 <%=form_for(@message) do |f| %>
-    名前:
-    <%=f.text_area:name,class:"form-control",rows:"1" %>
+    <div class="form-group">
+        <label for="inputName">名前:</label>
+        <%=f.text_field:name,class:"form-control",id:"inputName",placeholder:"名前" %>
+    </div>
     
-    内容:
-    <%=f.text_area:body,class:"form-control",rows:"3" %>
+    <div class="form-group">
+        <label for="inputBody">内容:</label>
+        <%=f.text_area:body,class:"form-control",rows:"3",id:"inputBody",placeholder:"内容" %>
+    </div>
     <%=f.submit class:"btn btn-sm btn-primary" %>
 <% end %>
